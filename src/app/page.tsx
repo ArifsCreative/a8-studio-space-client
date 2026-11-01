@@ -8,10 +8,10 @@ import HostCreatorSupport from "@/components/host-creator-support";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import FeaturedStudios from "@/components/featured-studios";
 
 const slides = [
   {
@@ -172,6 +172,7 @@ export default function Home() {
       </section>
 
       {/* Placeholder for the next homepage sections */}
+      <FeaturedStudios />
       <StudioCategories />
       <HowItWorks />
       <HostCreatorSupport />
