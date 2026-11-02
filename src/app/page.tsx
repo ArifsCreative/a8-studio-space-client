@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import HeroSlider from "@/components/hero-slider";
 import FeaturedStudios from "@/components/featured-studios";
 import StudioCategories from "@/components/studio-categories";
