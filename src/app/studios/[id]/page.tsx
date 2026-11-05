@@ -11,6 +11,7 @@ import {
   Star,
   Users,
 } from "lucide-react";
+import BookingForm from "@/components/booking-form";
 
 export const dynamic = "force-dynamic";
 
@@ -216,14 +217,11 @@ export default async function StudioDetailsPage({
                 Choose your preferred date and booking hours.
               </div>
 
-              <div className="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-zinc-300">
-                Online booking will be available soon.
-              </div>
-
-              <p className="mt-5 text-center text-xs leading-5 text-zinc-500">
-                Booking functionality is currently under development.
-                No reservation or payment will be processed.
-              </p>
+              <BookingForm
+                studioId={studio._id}
+                hourlyRate={studio.pricePerHour}
+                currency={studio.currency || "৳"}
+              />
             </div>
           </aside>
         </div>

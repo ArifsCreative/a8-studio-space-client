@@ -6,6 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import {
   Aperture,
   ArrowUpRight,
+  CalendarDays,
   Loader2,
   LogOut,
   Menu,
@@ -95,11 +96,10 @@ export default function Navbar() {
               key={item.href}
               href={item.href}
               aria-current={isActive(item.href) ? "page" : undefined}
-              className={`relative py-2 text-sm font-medium transition-colors hover:text-primary ${
-                isActive(item.href)
-                  ? "text-primary"
-                  : "text-muted-foreground"
-              }`}
+              className={`relative py-2 text-sm font-medium transition-colors hover:text-primary ${isActive(item.href)
+                ? "text-primary"
+                : "text-muted-foreground"
+                }`}
             >
               {item.label}
 
@@ -122,6 +122,20 @@ export default function Navbar() {
             </div>
           ) : user ? (
             <>
+              <Link
+                href="/my-bookings"
+                aria-current={
+                  pathname === "/my-bookings" ? "page" : undefined
+                }
+                className={`inline-flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm font-medium transition ${pathname === "/my-bookings"
+                  ? "bg-secondary text-primary"
+                  : "text-muted-foreground hover:bg-secondary hover:text-primary"
+                  }`}
+              >
+                <CalendarDays className="size-4" />
+                My Bookings
+              </Link>
+
               <div className="flex max-w-44 items-center gap-2 rounded-lg border border-border px-3 py-2">
                 <UserRound className="size-4 shrink-0 text-primary" />
 
@@ -199,11 +213,10 @@ export default function Navbar() {
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
                 aria-current={isActive(item.href) ? "page" : undefined}
-                className={`rounded-lg px-4 py-3 text-sm font-medium hover:bg-secondary ${
-                  isActive(item.href)
-                    ? "bg-secondary text-primary"
-                    : "text-muted-foreground"
-                }`}
+                className={`rounded-lg px-4 py-3 text-sm font-medium hover:bg-secondary ${isActive(item.href)
+                  ? "bg-secondary text-primary"
+                  : "text-muted-foreground"
+                  }`}
               >
                 {item.label}
               </Link>
@@ -220,6 +233,21 @@ export default function Navbar() {
                 </div>
               ) : user ? (
                 <>
+                  <Link
+                    href="/my-bookings"
+                    onClick={() => setMenuOpen(false)}
+                    aria-current={
+                      pathname === "/my-bookings" ? "page" : undefined
+                    }
+                    className={`flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium transition ${pathname === "/my-bookings"
+                        ? "bg-secondary text-primary"
+                        : "text-muted-foreground hover:bg-secondary hover:text-primary"
+                      }`}
+                  >
+                    <CalendarDays className="size-5" />
+                    My Bookings
+                  </Link>
+                  
                   <div className="flex items-center gap-3 rounded-lg border border-border px-4 py-3">
                     <UserRound className="size-5 shrink-0 text-primary" />
 
