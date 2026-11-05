@@ -198,7 +198,7 @@ export default function Footer() {
             © {new Date().getFullYear()} StudioSpace. All rights reserved.
           </p>
 
-          <p>Made for creators, by creators.</p>
+          <p>Made for creators, crafted by Arifur Rahaman.</p>
         </div>
       </div>
     </footer>

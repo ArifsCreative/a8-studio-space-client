@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+StudioSpace
 
-## Getting Started
+Live Website: https://a8-studio-space-client.vercel.app
 
-First, run the development server:
+StudioSpace is a creative studio booking platform where creators can discover, explore, and book creative spaces for their projects.
 
-```bash
+Features :
+User registration and secure login with Better Auth.
+Explore creative studios and browse by category.
+View detailed studio information, images, and hourly pricing.
+Check studio availability for selected dates and times.
+Book studios with automatic price calculation.
+Cancel pending bookings.
+Responsive design for desktop and mobile devices.
+
+Technology Stack :
+Frontend: Next.js 16, React 19, TypeScript.
+Styling: Tailwind CSS 4, shadcn/ui.
+
+Authentication: Better Auth, JWT.
+
+Icons: Lucide React.
+
+Notifications: Sonner.
+
+Backend: Express.js, TypeScript.
+
+Database: MongoDB Atlas.
+
+Install dependencies:
+npm install
+
+Create a .env.local file in the project root:
+NEXT_PUBLIC_API_URL=http://localhost:5000
+
+Start the development server:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Examiner Test Credentials
+Website: https://a8-studio-space-client.vercel.app
+Email: arif123@gmail.com
+Password:123123123
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+GitHub Repository
+https://github.com/ArifsCreative/a8-studio-space-client
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Made for creators, crafted by Arifur Rahaman.
